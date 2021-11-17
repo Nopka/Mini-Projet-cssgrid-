@@ -1,0 +1,44 @@
+$nb_columns: 12;
+$gutter_width: 2;
+$one-column-width: (100% - (($nb_columns + 1) * ($gutter_width))) / ($nb_columns);
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat($nb_columns, 1fr);
+    grid-gap: $gutter_width;
+}
+
+@mixin es($length, $offset, $order){ 
+    @media only screen and (max-width: 499px) {
+        grid-column: span $length;
+        margin-left: $offset *($one-column-width) + ($offset + 1)*($gutter_width);
+        order: $order;
+    }
+}
+@mixin s($length, $offset) {
+    @media only screen and (min-width: 500px)and (max-width: 699px) {
+        grid-column: span $length;
+        margin-left: $offset *($one-column-width) + ($offset + 1)*($gutter_width);
+    }
+}
+
+@mixin m($length, $offset, $order) {
+    @media only screen and(min-width: 700px) and (max-width: 1199px) {
+        grid-column: span $length;
+        margin-left: $offset *($one-column-width) + ($offset + 1)*($gutter_width);
+        order: $order;
+    }
+}
+
+@mixin l($length, $offset, $order) {
+    @media only screen and (min-width: 1200px) and (max-width:1599px) {
+        grid-column: span $length;
+        margin-left: $offset *($one-column-width) + ($offset+1)*($gutter_width);
+        order: $order;
+    }
+}
+@mixin el($length, $offset){
+    @media only screen and (min-width: 1600px){
+        grid-column: span $length;
+        margin-left: $offset *($one-column-width) + ($offset+1)*($gutter_width);
+    }
+}

@@ -1,0 +1,153 @@
+// import des paramètres de la grille cssGrid
+@import '_cssGrid';
+
+// global modifications
+#logo{
+     width: 3em;
+}
+.author{
+     text-decoration: underline;
+}
+.date{
+     font-style: italic;
+}
+.logo{
+     width: 20px;
+}
+li{
+     list-style: none;
+}
+#icones{
+     width: 100%;
+}
+section{
+     border: 1px solid;
+     border-color: gray;
+     div{
+          img{
+               width: 100%;
+          }
+          h2{
+               color: orange;
+          }
+     }
+}
+// header modifications
+header{
+     border: 1px solid;
+     border-color: gray;
+     div{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+     }
+     p{
+          color: gray;
+          text-shadow: 1px 1px 0px gray;
+     }
+}
+//footer modifications
+footer{
+     margin-top: 1em;
+     display: flex;
+     flex-direction: row-reverse;
+     div{
+          border:1px solid;
+          border-color: black;
+          border-radius: 100px;
+     }
+}
+// per section modifications
+article{
+     @include grid;
+     nav{
+          color: orange; 
+          @include el(2,0);
+          @include l(2,0,1);
+          @include m(3,0,1);
+          @include s(3,0);
+          @include es(12,0,1);
+     }
+     section:nth-child(2){ //amp
+          @include el(4,0);
+          @include l(5,0,2);
+          @include m(6,0,2);
+          @include s(9,0);
+          @include es(12,0,2);
+          rotate: -1deg;
+     }
+     section:nth-child(3){ //drive
+          @include el(4,0);
+          @include l(5,0,3);
+          @include m(6,0,4);
+          @include s(9,0);
+          @include es(12,0,3);
+          rotate: 1deg;
+     }
+     section:nth-child(4){ //drake
+          @include el(2,0);
+          @include l(2,0,5);
+          @include m(3,0,3);
+          @include s(3,0);
+          @include es(6,0,5);
+          rotate: -1deg;
+     }
+     section:nth-child(5){ //reactjs
+          @include el(4,0);
+          @include l(5,0,4);
+          @include m(6,0,5);
+          @include s(9,0);
+          @include es(12,0,4);
+          rotate: 1deg;
+     }
+     section:nth-child(6){ //angular
+          @include el(2,0);
+          @include l(2,0,6);
+          @include m(3,0,6);
+          @include s(3,0);
+          @include es(6,0,6);
+          rotate: -1deg;
+     }
+     section:nth-child(7){ //crayon
+          @include el(2,0);
+          @include l(3,0,7);
+          @include m(3,0,7);
+          @include s(3,0);
+          @include es(6,0,7);
+          rotate: 1deg;
+     }
+     section:nth-child(8){ //wordpress
+          @include el(4,0);
+          @include l(5,0,8);
+          @include m(6,0,8);
+          @include s(9,0);
+          @include es(12,0,8);
+          rotate: -1deg;
+     }
+     section:nth-child(9){ //firebase
+          @include el(4,0);
+          @include l(5,0,9);
+          @include m(6,0,9);
+          @include s(9,0);
+          @include es(12,0,9);
+          rotate: 1deg;
+     }
+     section:nth-child(10){ //robot
+          @include el(4,0);
+          @include l(5,0,10);
+          @include m(6,0,10);
+          @include s(9,0);
+          @include es(12,0,10);
+          rotate: -1deg;
+     }
+     section:nth-child(11){ //bibliotheque
+          @include el(4,0);
+          @include l(5,0,11);
+          @include m(6,0,11);
+          @include s(9,0);
+          @include es(12,0,11);
+          rotate: 1deg;
+     }
+     
+}
+
